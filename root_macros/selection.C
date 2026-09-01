@@ -2,8 +2,8 @@
 #include "TH1D.h"
 #include <TFile.h>
 
-//R__LOAD_LIBRARY(libduneanaobj_StandardRecord.so)
-gSystem->Load("/Users/mdk16/Documents/RNTupleCAF_examples/cpp_standalone/build/lib/libStandardRecord.dylib");
+R__LOAD_LIBRARY(libStandardRecord.dylib)
+//R__LOAD_LIBRARY(/Users/mdk16/Documents/RNTupleCAF_examples/cpp_standalone/build/lib/libStandardRecord.dylib)
 
 constexpr double NDLArXLo = -346.9;
 constexpr double NDLArXHi = 346.9;
