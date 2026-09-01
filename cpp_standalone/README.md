@@ -15,4 +15,4 @@ export RNTUPLE_PATH=<path/to/rntuple.root>
 ./selection $RNTUPLE_PATH
 ```
 
-This will produce `track_lengths.root` and `neutrino_vertcies.root` which contain histograms of track lengths and neurtino vertices. And in the command line, there will be a print out which shows the efficiency of the selecion implemented in [selection.cpp](selection.cpp).
+This will produce `track_lengths.root` and `neutrino_vertcies.root` which contain histograms of track lengths and neutrino vertices. And in the command line, there will be a print out which shows the efficiency of the selection implemented in [selection.cpp](selection.cpp).

@@ -1,6 +1,6 @@
 # C++ framework with duneanasel
 
-This extends [cpp_standalone](../cpp_standalone/) by including [duneanasel](https://github.com/DUNE/duneanasel) in the cmake project, and using a selection in `duneanasel` in [selection_duneanasel.cpp](selection_duneanasel.cpp).
+This extends [cpp_standalone](../cpp_standalone/) by including [duneanasel](https://github.com/DUNE/duneanasel) in the cmake project, and using a selection from `duneanasel` in [selection_duneanasel.cpp](selection_duneanasel.cpp).
 
 First let's build
 ```
