@@ -16,7 +16,7 @@ The "cpp" approaches correspond to C++ frameworks, where there are multiple scri
 - [cpp_standalone/](cpp_standalone/) contains the most examples (analogous to those in the Jupyter notebook) and is a minimal approach to get things going
 - [cpp_duneanasel/](cpp_duneanasel/) shows how you might extend `cpp_standalone` to bring in external libraries like [duneanasel](https://github.com/DUNE/duneanasel) 
 
-Finally, there is the approach using root macros, again mirroring the examples from the Jupyter notebook. The advantage of this approach is that you do not have to rebuild your scripts, and you can play around with a CAF interactively in the command line. However, you do have to load the StandardRecord library which you must find or build yourself.
+Finally, there is the approach using root macros, which shows just the selection example (though the rest are easy to port over). The advantage of this approach is that you do not have to rebuild your scripts, and you can play around with a CAF interactively in the command line. However, you do have to load the StandardRecord library which you must find or build yourself.
 
 Feedback is very welcome! Please raise issues if you think any of the examples can be improved or more can be added.
 

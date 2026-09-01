@@ -2,6 +2,10 @@
 #include "TH1D.h"
 #include <TFile.h>
 
+R__LOAD_LIBRARY(libStandardRecord.so)
+//R__LOAD_LIBRARY(libStandardRecord.dylib) // for MacOS (.dylib)
+//R__LOAD_LIBRARY(/Users/mdk16/Documents/RNTupleCAF_examples/cpp_standalone/build/lib/libStandardRecord.dylib)
+
 constexpr double NDLArXLo = -346.9;
 constexpr double NDLArXHi = 346.9;
 constexpr double NDLArYLo = -215.5;
@@ -9,16 +13,14 @@ constexpr double NDLArYHi = 81.7;
 constexpr double NDLArZLo = 418.2;
 constexpr double NDLArZHi = 913.3;
 
-template <typename Interaction> // must template because root doesn't know what caf::SRInteraction is
-bool inFV(Interaction ixn) {
+bool inFV(caf::SRInteraction ixn) {
   return ixn.vtx.x > NDLArXLo && ixn.vtx.x < NDLArXHi &&
          ixn.vtx.y > NDLArYLo && ixn.vtx.y < NDLArYHi &&
          ixn.vtx.z > NDLArZLo && ixn.vtx.z < NDLArZHi;
 }
 
 // check in ixn is in FV and if has primary and if all primaries are contained
-template <typename Interaction>
-bool isSelected(Interaction ixn) {
+bool isSelected(caf::SRInteraction ixn) {
   if (!inFV(ixn)) return false;
 
   bool hasPrimary = false;
@@ -31,7 +33,7 @@ bool isSelected(Interaction ixn) {
   return hasPrimary;
 }
 
-int selection() {
+int selection_with_lib() {
   auto reader = ROOT::RNTupleReader::Open("caf", "../rntuple.root");
   auto srView = reader->GetView<caf::StandardRecord>("rec");
 
