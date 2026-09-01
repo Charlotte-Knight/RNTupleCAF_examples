@@ -2,7 +2,8 @@
 #include "TH1D.h"
 #include <TFile.h>
 
-R__LOAD_LIBRARY(libStandardRecord.dylib)
+R__LOAD_LIBRARY(libStandardRecord.so)
+//R__LOAD_LIBRARY(libStandardRecord.dylib) # for MacOS (.dylib)
 //R__LOAD_LIBRARY(/Users/mdk16/Documents/RNTupleCAF_examples/cpp_standalone/build/lib/libStandardRecord.dylib)
 
 constexpr double NDLArXLo = -346.9;
